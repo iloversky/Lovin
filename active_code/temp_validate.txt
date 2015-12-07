@@ -1,0 +1,195 @@
+// form表单验证
+$.fn.extend({
+	iLover_validate: function(submitBtn, options) { // submitBtn: 表单提交按钮 id
+		var cxt = this; // 全局对象
+		var result = {}; // 返回结果
+		var msg = ""; // 验证时的显示信息
+		
+		this._options = {
+				  position: "left", // 提示框箭头位置
+	                 require:{
+	                	isRequire: true, // 是否需要为空验证
+						isSpace: true // 是否需要去除空格为空验证
+					 }, 
+					 length:{
+						isRequire: false, // 是否需要为空验证	
+						isLength: false, // 是否需要长度验证
+						isSpace: true, // 是否去除空格
+						isChar: false, // 是否区别汉字
+						isEncoding: true, // 汉字编码(一个汉字是作为[true] 3个字符还是[false] 2个字符)
+						minLength: 0,  // 最小长度 isLength为 true时必须填写
+						maxLength: -1 // 最大长度	
+				    },
+					email:{
+						isRequire: false, // 是否必填
+						isEmail: false // 是否要验证邮箱格式
+					},
+					telephone:{
+						isRequire: false, // 是否必填
+						isTel: false    // 是否电话号码验证
+					}
+		};
+		this.iLover_init = function () {
+            for (var p in options) {
+                this._options[p] = options[p];
+            }
+            
+           $(this).keyup(this.iLover_validateAll).change(this.iLover_validateAll).focus(this.iLover_validateAll);
+        };
+        
+        this.iLover_showTip = function() {
+        	var content = $(this).val();
+        	if(cxt._options.length.isSpace) { // 去除空格验证
+        		content = $.trim(content);
+        	}
+        	$("#toolTipDiv").remove();
+        	msg = ""; // 初始化
+        	var error = "<label class='error' />&nbsp;";
+        	var success = "<label class='success' />&nbsp;";
+        	if(this._options.require.isRequire) {
+            	 if(result.isRequire) {
+            		 msg += success;
+                 } else {
+                	 msg += error;
+                 }
+            	 msg += "必填字段<br/>";
+            }
+            if(this._options.length.isLength) {
+            	if(result.isLength) {
+            		msg += success;
+            	} else {
+            		if(this._options.length.isRequire || content) {
+            			msg += error;
+            		}
+            	}
+            	if(result.isLength || this._options.length.isRequire || content) {
+	            	if(this._options.length.minLength > 0 && (!this._options.length.maxLength || (this._options.length.maxLength <= this._options.length.minLength))) {
+	        			msg += "长度必须大于 " + this._options.length.minLength + "<br/>";
+	        		} else if(this._options.length.maxLength > this._options.length.minLength) {
+	        			msg += "长度必须在 " + this._options.length.minLength + "与 " + this._options.length.maxLength + "之间<br/>";
+	        		}
+            	}
+            }
+            if(this._options.email.isEmail) {
+            	if(result.isEmail) {
+            		msg += success;
+            	} else {
+            		if(this._options.email.isRequire || content) {
+            			msg += error;
+            		}
+            	}
+            	if(result.isEmail || this._options.email.isRequire || content) {
+            		 msg += "邮箱格式不正确<br/>";
+            	}
+            }
+            if(this._options.telephone.isTel) {
+            	if(result.isTel) {
+            		msg += success;
+            	} else {
+            		if(this._options.telephone.isRequire || content) {
+            			msg += error;
+            		}
+            	}
+            	if(result.isTel || this._options.telephone.isRequire || content) {
+            		msg += "电话号码格式不正确<br/>";
+            	}
+            }
+        	$(this).showTip({
+        		flagInfo : msg,
+        		position: this._options.position
+        	});
+        };
+        
+        this.iLover_validateAll = function() {
+        	 if(cxt._options.require.isRequire) {
+             	cxt.iLover_validateEmpty();
+             }
+             if(cxt._options.length.isLength) {
+             	cxt.iLover_validateLength();
+             }
+             if(cxt._options.email.isEmail) {
+            	 cxt.iLover_validateEmail(); 
+             }
+             if(cxt._options.telephone.isTel) {
+            	 cxt.iLover_validateTel();
+             }
+             cxt.iLover_showTip();
+             if(!result.isRequire || !result.isLength || !result.isEmail || !result.isTel) {
+            	 return false;
+             }
+        };
+        
+        // 为空验证
+        this.iLover_validateEmpty = function () {
+        	var content = $(this).val();
+        	if(cxt._options.require.isSpace) { // 去除空格验证
+        		content = $.trim(content);
+        	}
+        	if(content) {
+        		result.isRequire = true;
+        	} else {
+        		result.isRequire = false;
+        	}
+        };
+        // 长度验证
+        this.iLover_validateLength = function () {
+        	var content = $(this).val();
+        	if(cxt._options.length.isSpace) { // 去除空格验证
+        		content = $.trim(content);
+        	}
+        	var char = -1; // 不区别汉字
+        	if(cxt._options.length.isChar) {
+        		if(cxt._options.length.isEncoding) { // 一个汉字占 3个字符
+        			char = 3;
+        		} else {
+        			char = 2;
+        		}
+        	} 
+        	var len = this.iLover_countChar(content, char);
+        	if(len >= cxt._options.length.minLength && (!cxt._options.length.maxLength || len <= cxt._options.length.maxLength)) {
+        		result.isLength = true;
+        	} else {
+        		result.isLength = false;
+        	}
+        };
+        
+        this.iLover_validateEmail = function() {
+        	var content = $.trim($(this).val());
+        	var reg = /^[a-zA-Z0-9_+.-]+\@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9]{2,4}$/;
+        	if(reg.exec(content)) {
+        		result.isEmail = true;
+        	} else {
+        		result.isEmail = false;
+        	}
+        };
+        
+        this.iLover_validateTel = function() {
+        	var content = $.trim($(this).val());
+        	var reg = /(^(\+86)?[0-9][0-9]\d{4,10}$)|(^(([0\+]\d{2,3}-?)?(0\d{2,3})-?)?(\d{7,8})(-(\d{3,}))?$)/;
+        	if(reg.exec(content)) {
+        		result.isTel = true;
+        	} else {
+        		result.isTel = false;
+        	}
+        };
+        
+        this.iLover_countChar = function(content, char) {
+        	var currLen = 0;
+        	if(char == -1) {
+        		currLen = content.length;
+        	} else {
+	        	// /[^\x00-\xff]/g.test(content) content中是否存在汉字
+	        	for(var i = 0; i < content.length; i++) {
+	                // content[i]可能为 undefined, 最好使用 charAt(i）
+	        		if (/[^\x00-\xff]/.test(content.charAt(i))) { // 汉字
+	        			currLen += char; // 汉字
+	        		} else {
+	        			currLen += 1;
+	        		}	
+	        	}
+        	}
+        	return currLen;
+        };
+        this.iLover_init();
+	}
+});

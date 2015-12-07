@@ -1,0 +1,17 @@
+iframe自适应高度
+function SetWinHeight(obj) {
+	  var win=obj;
+	  if(document.getElementById) {
+		  if(win && !window.opera) {
+			  if(win.contentDocument && win.contentDocument.body.offsetHeight) {
+				  	win.height = win.contentDocument.body.offsetHeight; 
+			  } else if(win.Document && win.Document.body.scrollHeight) {
+				  	win.height = win.Document.body.scrollHeight;
+			  }
+	      }
+	  }
+  }
+
+
+// 没有设置 iframe id时，设置 iframe自适应高度
+$(window.parent.document).find("iframe").css("height", document.body.scrollHeight + "px");

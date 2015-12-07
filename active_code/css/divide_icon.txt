@@ -1,0 +1,10 @@
+.icon{ background:url(../images/mulIcon.png) no-repeat;width:18px; line-height:18px; display:inline-block;}  
+.tu0101{background-position:-0px -0px;}  
+.tu0201{background-position:-20px -0px;}  
+.tu0301{background-position:-40px -0px;}  
+.tu0401{background-position:-60px -0px;}  
+.tu0501{background-position:-80px -0px;}  
+.tu0601{background-position:-100px -0px;}  
+.tu0701{background-position:-120px -0px;}  
+.tu0801{background-position:-140px -0px;}  
+.tu0901{background-position:-160px -0px;} 

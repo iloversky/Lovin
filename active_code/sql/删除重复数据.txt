@@ -1,0 +1,23 @@
+--  Oracle
+DELETE  FROM  EMP E  WHERE  E.ROWID > (SELECT MIN(X.ROWID) 
+FROM  EMP X  WHERE  X.EMP_NO = E.EMP_NO); 
+
+
+--  查询重复的
+select * from
+(select ROW_NUMBER() OVER(order by p.EXAM_USER_ID) rowNum,p.EXAMPERSON_ID,p.EXAM_USER_ID,t.num from T_QUESTION_SURVEY_EXAMPERSON p left join
+(select count(*) num, EXAM_USER_ID from T_QUESTION_SURVEY_EXAMPERSON where EXAM_ID='8a2d7edd444a0e3f014452bdc47a00a0' group by EXAM_USER_ID) t
+on p.EXAM_USER_ID=t.exam_user_id
+where t.num>=2 and p.EXAM_ID='8a2d7edd444a0e3f014452bdc47a00a0') tt 
+where MOD(tt.rowNum,2)=1'
+
+
+
+-- 删除重复的
+delete from T_QUESTION_SURVEY_EXAMPERSON pp where  pp.EXAMPERSON_ID in
+(select tt.EXAMPERSON_ID from
+(select ROW_NUMBER() OVER(order by p.EXAM_USER_ID) rowNum,p.EXAMPERSON_ID,p.EXAM_USER_ID,t.num from T_QUESTION_SURVEY_EXAMPERSON p left join
+(select count(*) num, EXAM_USER_ID from T_QUESTION_SURVEY_EXAMPERSON where EXAM_ID='8a2d7ed6430fe96501434655987c025f' group by EXAM_USER_ID) t
+on p.EXAM_USER_ID=t.exam_user_id
+where t.num>=2 and p.EXAM_ID='8a2d7ed6430fe96501434655987c025f') tt 
+where MOD(tt.rowNum,2)=1)

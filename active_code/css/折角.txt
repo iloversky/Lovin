@@ -1,0 +1,65 @@
+<style type="text/css">
+<!--
+#container {
+background: #666;
+margin: auto;
+width: 500px;
+height: 700px;
+padding-top: 30px;
+}
+h1 {
+margin-left: -20px;
+font:12px/2em georgia;
+color:#fff;
+text-indent:2em;
+position:relative;
+background:#d23c18;
+}
+h1:before{
+content:" ";
+display:block;
+position:absolute;
+bottom:100%;left:0px;
+width:0;
+height:0;
+border-left:10px solid transparent;
+border-top:3px solid transparent;
+border-right:10px solid #9d3016;
+border-bottom:3px solid #9d3016;
+
+}
+-->
+</style>
+<!--[if IE]>
+<style>
+h1 {
+font:12px/2em georgia;
+color:#fff;
+text-indent:2em;
+position:relative;
+background:#d23c18;
+*zoom:1;
+}
+.arrow {
+content:" ";
+display:block;
+position:absolute;
+bottom:100%;left:0px;
+width:0;
+height:0;
+border-left:10px solid transparent;
+border-top:3px solid transparent;
+border-right:10px solid #9d3016;
+border-bottom:3px solid #9d3016;
+overflow:hidden;
+}
+</style>
+<![endif]-->
+
+
+Html
+
+
+<div id="container">
+<h1>我的标题 <span class="arrow"></span></h1>
+</div>

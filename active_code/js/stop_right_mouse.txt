@@ -1,0 +1,4 @@
+// ÆÁ±ÎÊó±êÓÒ¼ü
+document.oncontextmenu = function() {
+    event.returnValue = false;
+}

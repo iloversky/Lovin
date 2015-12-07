@@ -1,0 +1,13 @@
+// 回车清空内容
+ 	function backspaceClear(event) {
+ 		if(event.keyCode == 8) { // Backspace键
+ 			$("#pmsPerfor\\.orgName").val("");
+ 			$("#pmsPerfor\\.orgId").val("");
+ 		} else {
+ 			if (document.all) {
+ 				window.event.returnValue = false;
+ 		    } else {
+ 	            arguments.callee.caller.arguments[0].preventDefault();
+ 		    }
+ 		}
+ 	}

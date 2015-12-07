@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>日期选择器</title>
+<link href="../Css/Style.css" rel="stylesheet" type="text/css" />
+<script src="../scripts/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../scripts/calendar/wdatePicker.js"  type="text/javascript"></script><!-- 日期控件 -->
+<!--Radio-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#optionlist li").find(".pollspanRadio input:checked").parent().addClass("selectedoption");
+        });
+        $("#optionlist li").live('click', function () {
+        //移除之前选中的radio的样式
+            $("#optionlist li .pollspanRadio").removeClass("selectedoption");
+            $(this).find(".pollspanRadio").addClass(" selectedoption");
+            $(this).find("input[type='radio']").get(0).click();
+        });
+        $("#result").live('click',function () {
+            var selectedOptionText = $("#optionlist li").find(".pollspanRadio input:checked").parent().parent().find(".pollspanContent").attr("data-index");
+            alert(selectedOptionText);
+        });
+    </script>
+    
+
+ <!--Radio End-->
+    
+
+
+</head>
+
+<body>
+
+<div class="Center">
+<div id="optionContainer">
+        <h2>
+            单选按钮raido</h2>
+      
+        <ul id="optionlist">
+            <li><span class="pollspanRadio">
+                <input name="pollresult" id="raido1" type="radio" class="radioinput" answerid="1"></span><span
+                    class="radiotext"><label class="pollspanContent" for="raido1" data-index="1">
+                        HTML(5)</label></span></li>
+                        
+            <li><span class="pollspanRadio">
+                <input name="pollresult" id="raido2" type="radio" class="radioinput" answerid="2"></span><span
+                    class="radiotext"><label class="pollspanContent" for="raido2" data-index="2">
+                        CSS(3)</label></span></li>
+            <li><span class="pollspanRadio">
+                <input name="pollresult" id="raido3" type="radio" class="radioinput" answerid="3" checked="checked"></span><span
+                    class="radiotext"><label class="pollspanContent" for="raido3" data-index="3">
+                        JavaScript</label></span></li>
+            <li><span class="pollspanRadio">
+                <input name="pollresult" id="raido4" type="radio" class="radioinput" answerid="4"></span><span
+                    class="radiotext"><label class="pollspanContent" for="raido4" data-index="4">
+                        各种JavaScript类库或框架</label></span></li>
+            <div class="clearfix">
+                &nbsp;
+            </div>
+        </ul>
+      
+      
+    </div>
+</div>
+</body>
+</html>

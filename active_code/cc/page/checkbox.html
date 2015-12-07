@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>日期选择器</title>
+<link href="../Css/Style.css" rel="stylesheet" type="text/css" />
+<script src="../scripts/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../scripts/calendar/wdatePicker.js"  type="text/javascript"></script><!-- 日期控件 -->
+ <!--CheckBox-->
+ <script language="javascript" type="text/javascript">
+	$(function() {
+		$(".Radio").toggle(function() {
+			$(this).removeClass("Radio");
+			$(this).addClass("RadioBlod");
+		},function() {
+			$(this).removeClass("RadioBlod");
+			$(this).addClass("Radio");
+		});
+		
+		$("#btn").click(function() {
+			var clazz = $("#myRd").attr("class");
+			alert(clazz=="Radio"?false:true)
+		});
+		$(".CheckBox").toggle(function() {
+			$(this).removeClass("CheckBox");
+			$(this).addClass("CheckBoxBlod");
+		},function() {
+			$(this).removeClass("CheckBoxBlod");
+			$(this).addClass("CheckBox");
+		});
+		
+		$("#btn2").click(function() {
+			var clazz = $("#ckb1").attr("class");
+			alert(clazz=="CheckBox"?false:true)
+		});
+	});
+</script>
+  <!--CheckBox end-->
+</head>
+
+
+
+</head>
+
+<body>
+
+<div class="Center">
+<div  style="width:300px; margin:auto; text-align:center;"><span style="float:left; padding-right:20px;">多选按钮checkbox</span>
+	<span class="CheckBox" id="ckb1"><input type="checkbox" name="checkbox" id="checkbox" class="CheckBoxNone" />
+<label for="checkbox">多选</label> </span>
+	<span class="CheckBox" id="ckb2"> 
+    <input type="checkbox" name="checkbox" id="checkbox" class="CheckBoxNone" />
+<label for="checkbox">多选</label></span>
+	<span class="CheckBox" id="ckb3">
+    <input type="checkbox" name="checkbox" id="checkbox"  class="CheckBoxNone"/>
+<label for="checkbox">多选</label>
+ </span>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>日期选择器</title>
+<link href="../Css/Style.css" rel="stylesheet" type="text/css" />
+<script src="../scripts/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="../scripts/ckeditor/ckeditor.js" type="text/javascript"></script> <!-- 引入ckeditor编辑器 -->
+
+</head>
+
+<body>
+	
+	<div style="overflow-y:auto;">
+    	<textarea id="editorContent" rows="5" col="15" name="editorContent" CssClass="ckeditor"></textarea>
+        <!-- <ckeditor:replace replace="editorContent" basePath="scripts/ckeditor" />-->
+        <script type="text/javascript">//alert(9);
+			CKEDITOR.replace('editorContent',{toolbar:'Basic', height:320, width:742});
+			
+		</script> 
+    </div> 
+
+</body>
+</html>

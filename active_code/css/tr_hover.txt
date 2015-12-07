@@ -1,0 +1,8 @@
+/* ie下 tr不支持 hover*/
+$(document).ready(function() {
+	$(".tableHeader tr").hover(function() {
+		$(this).addClass("hoverBg");
+	}, function() {
+		$(this).removeClass("hoverBg");
+	});
+});

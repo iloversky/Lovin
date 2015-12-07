@@ -1,0 +1,99 @@
+/* start top arrow*/
+.ui-tooltip-pointer-top {
+	border-top-width: 0;
+	border-left: 7px dashed transparent; 
+	border-right: 7px dashed transparent;
+	border-bottom: 8px solid #fd7d2c;
+	top: -8px;
+	display: block;
+	height:0;
+	left: 13%;
+	margin-left: -7px;
+	position: absolute; 
+	width:0;
+}
+
+.ui-tooltip-pointer-top-inner {
+	border-left: 6px dashed transparent; 
+	border-right: 6px dashed transparent;
+	border-bottom: 7px solid #fff;
+	left: -6px;
+	bottom: -9px;
+	position: absolute; 
+}
+/* end top arrow*/
+
+/* start bottom arrow*/
+.ui-tooltip-pointer-down {
+	border-bottom-width: 0;
+	border-left: 7px dashed transparent; 
+	border-right: 7px dashed transparent;
+	border-top: 8px solid #fd7d2c;
+	bottom:	-8px;
+	display: block;
+	height:0;
+	left: 18%;
+	margin-left: -7px;
+	position: absolute; 
+	width:0;
+}
+
+.ui-tooltip-pointer-down-inner {
+	border-left: 6px dashed transparent; 
+	border-right: 6px dashed transparent;
+	border-top: 7px solid #fff;
+	left: -6px;
+	top: -9px;
+	position: absolute; 
+}
+/* end bottom arrow*/
+
+/* start left arrow*/
+.ui-tooltip-pointer-left {
+	border-left-width: 0;
+	border-top: 7px dashed transparent; 
+	border-bottom: 7px dashed transparent;
+	border-right: 8px solid #fd7d2c;
+	left: -8px;
+	display: block;
+	height:0;
+	top: 10%;
+	margin-bottom: -7px;
+	position: absolute; 
+	width:0;
+}
+
+.ui-tooltip-pointer-left-inner {
+	border-top: 6px dashed transparent; 
+	border-bottom: 6px dashed transparent;
+	border-right: 7px solid black;
+	top: -6px;
+	right: -9px;
+	position: absolute; 
+}
+/* end left arrow*/
+
+/* start right arrow*/
+.ui-tooltip-pointer-right {
+	border-right-width: 0;
+	border-top: 7px dashed transparent; 
+	border-bottom: 7px dashed transparent;
+	border-left: 8px solid #fd7d2c;
+	right: -8px;
+	display: block;
+	height:0;
+	top: 10%;
+	margin-bottom: -7px;
+	position: absolute; 
+	width:0;
+}
+
+.ui-tooltip-pointer-right-inner {
+	border-top: 6px dashed transparent; 
+	border-bottom: 6px dashed transparent;
+	border-left: 7px solid #fff;
+	top: -6px;
+	left: -9px;
+	position: absolute; 
+}
+/*end right arrow*/

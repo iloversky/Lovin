@@ -1,0 +1,9 @@
+<c:forEach items="${reqDetail}" var="reqItem" varStatus="ind">
+	 ${ind.count}&nbsp;&nbsp;&nbsp;${reqItem.key.reqName}&nbsp;&nbsp;&nbsp;&nbsp;
+			    [&nbsp;&nbsp;&nbsp;
+			   <c:forEach items="${reqDetail}" varStatus="tab">
+			      <c:if test="${ind.count != tab.count}">
+			      	 <a href="#tab${tab.count}">${tab.count}</a>&nbsp;&nbsp;&nbsp;
+			      </c:if>
+			   </c:forEach>]
+ </c:forEach>

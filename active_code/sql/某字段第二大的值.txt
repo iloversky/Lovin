@@ -1,0 +1,4 @@
+/* DB2查询某字段值第二大的数据 */
+select * from 
+  (select row_number()over(order by LOGIN_TIME desc) as rn, LOGIN_TIME from T_EIP_LOGIN_LOG where USER_ID='zhaohu') as tmp 
+  where rn=2   

@@ -1,0 +1,4 @@
+// 禁止 input属性 readonly时 backspace键的 window.history()事件
+$("input[readOnly]").keydown(function(e) {
+	        e.preventDefault();
+	    });

@@ -1,0 +1,1 @@
+建立临时qq对话窗口：tencent://message/?uin=QQ号码

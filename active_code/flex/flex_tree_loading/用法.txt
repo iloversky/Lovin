@@ -1,0 +1,3 @@
+<renderer:Spinner id="spinner" x="{image.x}" y="{image.y}" delay="200" startImmediately="true"
+						  styleName="gradientlines" 
+						  includeInLayout="false" visible="false"/>

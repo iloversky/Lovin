@@ -1,0 +1,2 @@
+var isIE=navigator.userAgent.toUpperCase().indexOf("MSIE") ? true : false; 
+var isFirefox=navigator.userAgent.toUpperCase().indexOf("FIREFOX") ? true : false; 

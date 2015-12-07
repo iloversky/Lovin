@@ -1,0 +1,8 @@
+// 重置
+   function clear() {
+	   $(':input', '#pageForm_').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');  
+   }
+
+// 重置 file类型
+$("#file").after(file.clone().val(""));  
+$("#file").remove();

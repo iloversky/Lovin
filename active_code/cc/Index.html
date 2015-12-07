@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>页面组件展示</title>
+<link href="Css/Style.css" rel="stylesheet" type="text/css" />
+<script src="scripts/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  <!--	
+  		//iframe 自适应窗体(预留)
+  		function manage(obj, url) {
+    		$("#mainIFrame").attr("src", url);
+    		/* $(".leftmenu_blod").removeClass("leftmenu_blod").addClass("left_menu_normal");
+    		$(obj).removeClass("left_menu_normal").addClass("leftmenu_blod"); */
+	    }
+	    
+	    function TuneHeight(fm_name, fm_id) {
+			try{
+				var frm = document.getElementById(fm_id);
+				var subWeb = document.frames ? document.frames[fm_name].document: frm.contentDocument;
+				if (frm != null && subWeb != null) {
+					var Height = 570;
+					if (subWeb.documentElement.scrollHeight > Height) {
+						frm.style.height = subWeb.documentElement.scrollHeight + "px";
+					} else {
+						frm.style.height = Height + "px";
+					}
+					//frm.style.width = subWeb.documentElement.scrollWidth+"px";
+				}
+			}catch(exp){
+				
+			}
+		}
+		
+		$(document).ready(function(){
+		});
+//-->
+</script>
+</head>
+<body>
+<div id="Connet">
+<!--Top-->
+<div id="Top">
+<div class="TopBox"> <div class="TopLogo"></div> <div class="TopName"></div> </div>
+<div class="TopNav"></div>
+</div>
+<!--Top End-->
+
+<!--Body-->
+<div id="Body">
+<!--Left-->
+<div id="Left" >
+<div class="Title"><ul><li class="Icon1">页面组件目录</li></ul></div>
+
+ <div id="myTab">
+			<li class="MenuNormal" onclick="manage(this,'page/datepicker.html');" ><a href="#" >日期选择</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/singeLineInput.html');"><a href="#">单行文本输入</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/mutipleLineInput.html');"><a href="#">多行文本输入</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/editor.html')"><a href="#">富文本编辑器</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/Radio.html')"><a href="#">单选</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/checkbox.html')"><a href="#">多选</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/searchbox.html')"><a href="#">搜索框</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/selector.html')"><a href="#">下拉框</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/table.html')"><a href="#">表格</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/tree.html')"><a href="#">树</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/page.html')"><a href="#">翻页</a></li>
+			
+			<li class="MenuNormal" onclick="manage(this,'page/add.html')"><a href="#">添加</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/del.html')"><a href="#">删除</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/exit.html')"><a href="#">退出</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/save.html')"><a href="#">保存</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/query.html')"><a href="#">查询</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/sms.html')"><a href="#">短信</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/advance.html')"><a href="#">前进</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/backup.html')"><a href="#">后退</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/mail.html')"><a href="#">邮件</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/reset.html')"><a href="#">重置</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/carryout.html')"><a href="#">执行</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/cancel.html')"><a href="#">取消</a></li>
+			<li class="MenuNormal" onclick="manage(this,'page/search.html')"><a href="#">搜索</a></li>
+		</div>
+       
+</div>
+<!--Left-->
+
+<!--Right-->
+<div id="Right">
+<div class="Title"><ul><li class="Icon2">页面组件展示</li></ul></div>
+<div class="RightBox">
+<iframe id="mainIFrame" name="mainIFrame" src="page/datepicker.html" width="100%"  frameborder="0" onload="TuneHeight('mainIFrame','mainIFrame');">
+ </iframe>
+</div></div>
+<!--Right End-->
+
+</div>
+<!--main end-->
+
+<!--Footer-->
+<div class="Footer">
+<div class="Footers"><ul>
+<li>首页  <a href="#">网站地图</a>  与我联系 (13708419822 13888335009)</li>
+<li>&copy;&nbsp;&nbsp;版权所有：中国移动通信集团云南有限公司</li>
+</ul></div></div>
+<!--Footer end-->
+
+
+</body>
+</html>

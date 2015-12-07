@@ -1,0 +1,2 @@
+// 获取iframe中子元素
+$("#objId", document.getElementById("iframeId").contentWindow.document)

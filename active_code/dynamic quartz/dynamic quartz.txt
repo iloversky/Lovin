@@ -1,0 +1,26 @@
+<!-- Dynamic set task time 
+	 <bean id="springQuartzService"
+		class="com.ibm.ynmcc.survey.task.SpringQuartzService" autowire="byName" />
+	 -->
+	 <!--
+	 <bean id="scheduleInfoManager"
+		class="com.ibm.ynmcc.survey.task.ScheduleInfoManager">
+		<property name="scheduler" ref="schedulerFactory" />
+	</bean>   
+    <bean id="schedulerJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="scheduleInfoManager" />
+		<property name="targetMethod" value="reScheduleJob" />
+		<property name="concurrent" value="false" />
+	</bean> -->
+    <!-- <bean id="cronTrigger" class="com.ibm.ynmcc.survey.task.InitializingCronTrigger">
+		<property name="jobDetail" ref="schedulerJobDetail" />
+		<property name="scheduleInfoManager" ref="scheduleInfoManager" />
+	</bean> -->
+	<bean id="schedulerFactory"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<!-- <property name="triggers">
+			<list>
+				<ref local="cronTrigger" />
+			</list>
+		</property> -->
+	</bean> 

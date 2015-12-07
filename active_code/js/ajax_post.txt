@@ -1,0 +1,60 @@
+/**
+		ajax
+  			//////////////常规ajax以post方式提交//////////////
+  		**/
+  		var xmlhttp;
+		function ajax_post(url, param)
+		{
+		xmlhttp=null;
+		if (window.XMLHttpRequest)
+		  {// code for Firefox, Opera, IE7, etc.
+		  xmlhttp=new XMLHttpRequest();
+		  }
+		else if (window.ActiveXObject)
+		  {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		if (xmlhttp!=null)
+		  {
+		  xmlhttp.onreadystatechange=state_Change;
+		  xmlhttp.open("POST",url,true);
+		  xmlhttp.setRequestHeader("Cache-Control","no-cache");
+    	  xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+		  xmlhttp.send(param);
+		  }
+		else
+		  {
+		  alert("Your browser does not support XMLHTTP.");
+		  }
+		}
+
+//返回值处理函数格式
+		function state_Change()
+		{
+		if (xmlhttp.readyState==4)
+		  {// 4 = "loaded"
+		  if (xmlhttp.status==200)
+		    {// 200 = "OK"
+		    //处理json返回值
+		     //alert(xmlhttp.responseText);
+		     var myJSON2 = JSON.parse(xmlhttp.responseText,"");
+		     var sel = document.getElementsByName("childBlockType")[0];
+		     sel.options.length = 0;
+		     var optHead = document.createElement("option");
+		     optHead.value = "";
+		     optHead.innerText = "请选择";
+		     sel.appendChild(optHead);
+		     for(count =0; count<myJSON2.length; count ++){
+		     	var opt = document.createElement("option");
+		     	opt.innerText = myJSON2[count].text;
+		     	opt.value = myJSON2[count].value;
+		     	sel.appendChild(opt);
+		     }
+		     for(count = 0; count<document.forms[0].childBlockType.options.length; count++){
+	   			if(document.forms[0].childBlockType.options[count].innerText == '<%=request.getParameter("childBlockName")==null?"":request.getParameter("childBlockName").toString()%>'){
+	   				document.forms[0].childBlockType.options[count].selected = true;
+	   			}
+   			 }
+		    }
+		  }
+		}

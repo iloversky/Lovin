@@ -1,0 +1,5 @@
+不允许 ftp匿名用户登录
+   修改 etc/vsftpd/vsftpd.conf  anonymous_enable=NO
+重启 ftp
+  红帽 service vsftpd restart
+       /etc/init.d/vsftpd restart

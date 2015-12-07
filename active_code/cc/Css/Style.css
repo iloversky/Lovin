@@ -1,0 +1,174 @@
+@charset "utf-8";
+/*公用*/
+Body, div, p, ul, ol, dl, dt, dd, li, form, input,  img, h1, h2, h3, h4, h5, h6{margin:0;padding:0px;text-align:left; }
+Body{color:#666;font-size:14px; font:12px/1.5 "微软雅黑","宋体"，Arial,Lucida,Verdana,Helvetica,sans-serif; position:relative;
+scrollbar-arrow-color: #FFF; /*图6,三角箭头的颜色*/
+scrollbar-face-color: #1584d6; /*图5,立体滚动条的颜色*/
+scrollbar-3dlight-color: #06C; /*图1,立体滚动条亮边的颜色*/
+scrollbar-highlight-color: #D5E8FA; /*图2,滚动条空白部分的颜色*/
+scrollbar-shadow-color: #036; /*图3,立体滚动条阴影的颜色*/
+scrollbar-darkshadow-color: #1584d6; /*图4,立体滚动条强阴影的颜色*/
+scrollbar-track-color: #69b0dd; /*图7,立体滚动条背景颜色*/ 
+scrollbar-base-color:#1b6486; /*滚动条的基本颜色*/
+Cursor:url(mouse.cur); /*自定义个性鼠标*/
+}
+
+ul,ol,img,li{list-style-type:none; border:0px;  }
+A:Link {color: #5a5a5a; text-decoration: none;}A:Visited {	text-decoration: none;color: #5a5a5a; }
+A:Hover {text-decoration:none; color:#ff7002;}A:Active {text-decoration: none;color: #5a5a5a;}
+A:Active, A:Visited{outline:none;blr:expression(this.onFocus=this.blur());}
+
+#Connet{ width:1000px; height:auto; margin:auto; text-align:center;  overflow:hidden; }
+#Body{ height:auto; overflow:hidden; margin-top:12px; margin-bottom:10px; }
+#Top{ height:162px; overflow:hidden;  background: url(../Image/TopBg.gif) left top repeat-x;  }
+#Left{ width:222px; height:480px; border:1px solid #95c2e6; float:left; overflow-y:auto; overflow-x:hidden; }
+#Right{width:766px; height:480px; border:1px solid #95c2e6; float:right;  overflow:hidden;}
+.RightBox{ padding:10px;}
+.Title{ height:29px; background:url(../Image/Title.gif); overflow:hidden; padding-left:14px;}
+.Title ul li{line-height:27px;color:#005197; font-weight:bold;  }
+.Icon1{ background:url(../Image/Icon1.gif) left top no-repeat; padding-left:24px;}
+.Icon2{ background:url(../Image/Icon2.gif) left top no-repeat; padding-left:24px;}
+
+.MenuNormal { padding-left:20px; height:26px;line-height:24px;  color:#7e9ec9; background:url(../Image/TitleNormal.gif); overflow:hidden;}
+.MenuNormal A:Link {color: #7e9ec9; text-decoration: none;}.MenuNormal A:Visited {	text-decoration: none;color: #7e9ec9; }
+.MenuNormal A:Hover {text-decoration:none; color:#005197;}.MenuNormal A:Active {text-decoration: none;color: #7e9ec9;}
+
+.Block{ display:block;}
+.None{ display:none;}
+/*公用 End*/
+
+/*Top*/
+.TopBox{ height:122px; overflow: hidden; }
+.TopLogo{ width:239px; height:65px; float:left; background:url(../Image/Logo.png); margin:30px 0px 0px 50px; }
+.TopName{ width:399px;  height:57px; float:left; background:url(../Image/Name.png); margin:36px 0px 0px 80px;}
+.TopNav{ height:40px; overflow:hidden; background:url(../Image/NavBg.gif) center no-repeat;}
+/*Top end*/
+
+/*Form*/
+.Input{  height:22px; line-height:22px; background:#f7f7f7; border:1px solid #d2d2d2; color:#CCC; padding:0px 5px;}
+.InputSelected{  height:22px; line-height:22px; background:#f7f7f7; border:1px solid #d2d2d2; color:#333; padding:0px 5px;}
+
+.Textarea{  line-height:22px; background:#f7f7f7; border:1px solid #d2d2d2; color:#CCC; padding:0px 5px;
+scrollbar-arrow-color: #666; /*图6,三角箭头的颜色*/
+scrollbar-face-color: #F0F0F0; /*图5,立体滚动条的颜色*/
+scrollbar-3dlight-color: #F0F0F0; /*图1,立体滚动条亮边的颜色*/
+scrollbar-highlight-color: #F0F0F0; /*图2,滚动条空白部分的颜色*/
+scrollbar-shadow-color: #666; /*图3,立体滚动条阴影的颜色*/
+scrollbar-darkshadow-color: #F0F0F0; /*图4,立体滚动条强阴影的颜色*/
+scrollbar-track-color: #F0F0F0; /*图7,立体滚动条背景颜色*/ 
+scrollbar-base-color:#F0F0F0; /*滚动条的基本颜色*/
+Cursor:url(mouse.cur); /*自定义个性鼠标*/ 
+}
+.TextareaHover{  line-height:22px; background:#f7f7f7; border:1px solid #d2d2d2; color:#333; padding:0px 5px;
+scrollbar-arrow-color: #666; /*图6,三角箭头的颜色*/
+scrollbar-face-color: #F0F0F0; /*图5,立体滚动条的颜色*/
+scrollbar-3dlight-color: #F0F0F0; /*图1,立体滚动条亮边的颜色*/
+scrollbar-highlight-color: #F0F0F0; /*图2,滚动条空白部分的颜色*/
+scrollbar-shadow-color: #666; /*图3,立体滚动条阴影的颜色*/
+scrollbar-darkshadow-color: #F0F0F0; /*图4,立体滚动条强阴影的颜色*/
+scrollbar-track-color: #F0F0F0; /*图7,立体滚动条背景颜色*/ 
+scrollbar-base-color:#F0F0F0; /*滚动条的基本颜色*/
+Cursor:url(mouse.cur); /*自定义个性鼠标*/ 
+}
+
+.Select{  height:19px;  border:none;  margin:auto; text-align:center; }
+.Editor{ width:706px; height:407px; background:url(../Image/Editor.jpg) center bottom no-repeat; margin:auto; text-align: center; padding-top:1.5%;}
+.DatePicker{ width:180px; height:199px; background:url(../Image/DatePicker.jpg) center bottom no-repeat ; margin:auto; text-align:center; padding-top:18%;}
+.Margin{ width:100px; margin:auto; text-align:center;}
+.Radio{ width:22px; height:22px; background:url(../Image/Radio.png); border:none; float:left; }
+.RadioBlod{ width:22px; height:22px; background:url(../Image/RadioBlod.png); border:none; float:left;}
+
+.CheckBox{  height:22px; line-height:22px; background:url(../Image/CheckBox.png) left center no-repeat; border:none; float:left; padding:0px 10px 0px 25px; }
+.CheckBoxBlod{  height:22px; line-height:22px; background:url(../Image/CheckBoxBlod.png) left center no-repeat; border:none; float:left; padding:0px 10px 0px 25px; }
+
+.CheckBoxNone{ display:none;}
+.Page{ margin:auto; text-align:center;}
+.Page span{ border:1px solid #e7ecf0; text-align:center; color:#315a92; padding:3px 8px;  }
+
+.PageS{ margin:auto; text-align:center; margin-top:15px;}
+.PageS li{ width:49.5%; float:left; color:#315a92;}
+.PageS span{ border:1px solid #e7ecf0; text-align:center; color:#315a92; padding:3px 8px; margin-right:5px;  }
+.PageSInput{ border:1px solid #e7ecf0; padding:3px 8px; width:10px; margin:0px 3px;}
+
+.SearchBox{ width:406px; height:35px; background:url(../Image/SearchBox.gif) center bottom no-repeat;  }
+.SearchA{ width:310px; height:20px;  border:none; background:transparent; color:#ccc; margin:9px 5px 0px 20px;vertical-align:middle; float:left;}
+.SearchAHover{ width:310px; height:20px; border:none; background:transparent; color:#333; margin:9px 5px 0px 20px; vertical-align:middle; float:left;}
+.SearchB{ width:260px; height:22px; line-height:22px; border:1px solid #d2d2d2; background:#f7f7f7; color:#ccc;  vertical-align:middle;padding:2px 5px 0px  5px;}
+.SearchBHover{ width:260px; height:22px; line-height:22px; border:1px solid #d2d2d2; background:#f7f7f7; color:#333;vertical-align:middle; padding:2px 5px 0px  5px; }
+
+.SearchLogo2 img { width:59px; height:22px; margin-left:-63px; overflow:hidden; padding-bottom:1px;  }
+
+.SearchC{ width:186px; height:22px; background:#f7f7f7; border:1px solid #d2d2d2; color:#ccc; vertical-align:middle;padding:2px 5px 0px  5px; }
+.SearchCHover{ width:186px; height:22px; background:#f7f7f7; border:1px solid #d2d2d2; color:#333;  vertical-align:middle;padding:2px 5px 0px  5px; }
+.SearchLogo33{ width:16px; height:20px; margin-left:-24px; }
+.SearchButton{ width:56px; height:21px; border:none; background:transparent; margin:6px 0px 0px 7px; cursor:pointer;}
+
+.Vertical{ width:167px; height:285px; background:url(../Image/Vertical.jpg) center bottom no-repeat; margin:auto; text-align:center; padding-top:10%; }
+.Table{ background:#c1dcf1;color:#3b5d78; font-weight:bold;}
+.Table th{ background:url(../Image/TableTh.gif) left bottom repeat-x #FFF; color:#3b5d78; padding:4px 5px;}
+.Table td{ background:#FFF; color:#3b5d78; padding:4px 5px;}
+/*Form End*/
+
+/*Button*/
+.Center{  height:29px; margin:auto; text-align:center;  padding-top:25%; vertical-align:middle;}
+.Add{ width:73px; height:29px; background:url(../Image/Add.gif); border:none; cursor:pointer; }
+.Del{ width:73px; height:29px; background:url(../Image/Del.gif); border:none; cursor:pointer; }
+.Exit{ width:73px; height:29px; background:url(../Image/Exit.gif); border:none; cursor:pointer; }
+.Save{ width:73px; height:29px; background:url(../Image/Save.gif); border:none; cursor:pointer; }
+.Query{ width:73px; height:29px; background:url(../Image/Query.gif); border:none; cursor:pointer; }
+.Sms{ width:73px; height:29px; background:url(../Image/Sms.gif); border:none; cursor:pointer; }
+.Advance{ width:73px; height:29px; background:url(../Image/Advance.gif); border:none; cursor:pointer; }
+.BackUp{ width:73px; height:29px; background:url(../Image/BackUp.gif); border:none; cursor:pointer; }
+.Mail{ width:73px; height:29px; background:url(../Image/Mail.gif); border:none; cursor:pointer; }
+.Reset{ width:73px; height:29px; background:url(../Image/Reset.gif); border:none; cursor:pointer; }
+.Cancel{ width:73px; height:29px; background:url(../Image/Cancel.gif); border:none; cursor:pointer; }
+.CarryOut{ width:73px; height:29px; background:url(../Image/CarryOut.gif); border:none; cursor:pointer; }
+.Search{ width:73px; height:29px; background:url(../Image/Search.gif); border:none; cursor:pointer; }
+/*Button End*/
+
+/** add by yuelulan ,test for select  */
+
+DIV.selectbox-wrapper {	border-right: #b7d1eb 1px solid; border-top: #b7d1eb 0px solid; margin-top: -3px; border-left: #b7d1eb 1px solid; border-bottom: #b7d1eb 1px solid; position: absolute; background-color: #fff; text-align:left; }
+DIV.selectbox-wrapper UL LI.selected {background-color: #e0ecf7; }
+DIV.selectbox-wrapper UL LI.current {color: #fff; background-color: #36c; }
+DIV.selectbox-wrapper UL LI {padding-right: 3px; padding-left: 3px; padding-bottom: 3px; cursor: pointer; line-height: 20px; padding-top: 0px; letter-spacing:0px; width:156px;  }
+.selectbox {border:1px solid #afcbe8;  display: block; padding-left:4px; cursor: pointer; padding-top:5px;  background:url(../Image/bg01.gif) center right no-repeat;letter-spacing:0px; padding-right:10px;  }
+
+/** radio */
+/*对radio添加背景图*/
+ #optionContainer { width: 400px;  margin: 0 auto; text-align:center;}
+#optionlist li {  list-style: none;    clear: both; }
+.radiotext {  display: inline-block; width: 230px; margin-left: 8px; margin-bottom: 9px;}
+ .pollspanRadio { display: inline-block; margin-top: 3px; width: 22px; height: 22px; vertical-align:middle; background:url(../Image/RadialButton.png); background-repeat: no-repeat; background-position: 0 0; }
+ .radioinput { /*height: 0px; 需要将它不显示，同时又需要checked的值，所以这里将height设置为0*/ display: none;}
+ .selectedoption {background-position: 0 -22px;}
+ #result { cursor:pointer;}
+ /*radio*
+
+/*Form End*/
+
+/*Button*/
+.Center{  height:29px; margin:auto; text-align:center;  padding-top:25%;}
+.Add{ width:73px; height:29px; background:url(../Image/Add.gif); border:none; cursor:pointer; }
+.AddNode{ width:86px; height:29px; background:url(../Image/AddNode.gif); border:none; cursor:pointer;  }
+.Del{ width:73px; height:29px; background:url(../Image/Del.gif); border:none; cursor:pointer; }
+.Exit{ width:73px; height:29px; background:url(../Image/Exit.gif); border:none; cursor:pointer; }
+.Save{ width:73px; height:29px; background:url(../Image/Save.gif); border:none; cursor:pointer; }
+.Query{ width:73px; height:29px; background:url(../Image/Query.gif); border:none; cursor:pointer; }
+.Sms{ width:73px; height:29px; background:url(../Image/Sms.gif); border:none; cursor:pointer; }
+.Advance{ width:73px; height:29px; background:url(../Image/Advance.gif); border:none; cursor:pointer; }
+.BackUp{ width:73px; height:29px; background:url(../Image/BackUp.gif); border:none; cursor:pointer; }
+.Mail{ width:73px; height:29px; background:url(../Image/Mail.gif); border:none; cursor:pointer; }
+.Reset{ width:73px; height:29px; background:url(../Image/Reset.gif); border:none; cursor:pointer; }
+.Cancel{ width:73px; height:29px; background:url(../Image/Cancel.gif); border:none; cursor:pointer; }
+.CarryOut{ width:73px; height:29px; background:url(../Image/CarryOut.gif); border:none; cursor:pointer; }
+.Search{ width:73px; height:29px; background:url(../Image/Search.gif); border:none; cursor:pointer; }
+/*Button End*/
+
+/*Footer*/
+.Footer{ width:100%; height:46px; overflow:hidden; background-image:url(../Image/Footer_bg.gif);  }
+.Footers{ width:98%; height:40px; overflow:hidden; padding-top:4px;}
+.Footers ul li{ height:18px; line-height:18px; text-align:center; color:#315a92;}
+.Footers a:link {color:#315a92; text-decoration: none;}.Footers a:visited {	text-decoration: none;color: #315a92;}
+.Footers a:hover {text-decoration: none;color: #315a92;} .Footers a:active {text-decoration: none;color: #315a92;}    
+/*Footer end*/   

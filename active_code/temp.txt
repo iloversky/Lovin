@@ -1,0 +1,9 @@
+
+正在 Ping 0.0.0.1 具有 32 字节的数据:
+PING: 传输失败。General failure. 
+PING: 传输失败。General failure. 
+PING: 传输失败。General failure. 
+PING: 传输失败。General failure. 
+
+0.0.0.1 的 Ping 统计信息:
+    数据包: 已发送 = 4，已接收 = 0，丢失 = 4 (100% 丢失)，

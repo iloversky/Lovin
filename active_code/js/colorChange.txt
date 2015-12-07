@@ -1,0 +1,49 @@
+// 十六进制转换 RGB
+function colorRgb(hex) { 
+    	var sColor = hex.toLowerCase();  
+    	if(sColor.length === 4){   
+    		var sColorNew = "#";   
+    		for(var i = 1; i < 4; i++){    
+    			sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));    
+    		}   
+    		sColor = sColorNew;  
+    	}  
+    	//alert(sColor);
+    	//处理六位的颜色值 
+    	var sColorChange = []; 
+    	var rColor = [];
+    	for(var i = 1; i < 7; i += 2){   
+    		sColorChange.push(parseInt("0x" + sColor.slice(i, i + 2))); 
+    		rColor.push(255 - parseInt("0x" + sColor.slice(i, i + 2)));
+    	}
+    	var result = {
+    			"color": "RGB(" + sColorChange.join(",") + ")",
+    			"reverseColor": "RGB(" + rColor.join(",") + ")"
+    	};
+    	return result;
+    }
+
+
+// rgb转换十六进制
+function colorHex(that) {
+		var aColor = that.replace(/(?:\(|\)|rgb|RGB)*/g, "").split(",");
+		var strHex = "#";
+		var reStrHex = "#";
+		for ( var i = 0; i < aColor.length; i++) {
+			var hex = Number(aColor[i]).toString(16);
+			var reHex = (255 - Number(aColor[i])).toString(16);
+			if (hex === "0") {
+				hex += hex;
+			}
+			if(reHex === "0") {
+				reHex += reHex;
+			}
+			strHex += hex;
+			reStrHex += reHex;
+		}
+		var result = {
+				"color" : strHex,
+				"reverseColor" : reStrHex
+			};
+		return result;
+	}

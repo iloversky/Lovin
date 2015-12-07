@@ -1,0 +1,8 @@
+var _h = document.documentElement.scrollTop == 0 ? document.body.clientHeight : document.documentElement.clientHeight;
+		var _st = document.documentElement.scrollTop == 0 ? document.body.scrollTop : document.documentElement.scrollTop;
+		var _sh = document.documentElement.scrollTop == 0 ? document.body.scrollHeight : document.documentElement.scrollHeight;
+		if((_st != 0) && (_h + _st) >= _sh) { // µ½´ïµ×²¿
+			$(".bottomBtn").hide();			
+		} else {
+			$(".bottomBtn").show();
+		}

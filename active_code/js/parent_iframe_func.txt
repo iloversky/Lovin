@@ -1,0 +1,1 @@
+document.getElementById("step1Frame").contentWindow.document.getElementById("autoTour").click();

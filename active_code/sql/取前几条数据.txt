@@ -1,0 +1,1 @@
+select * from test.employee fetch first 1 rows only

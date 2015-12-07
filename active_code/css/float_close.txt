@@ -1,0 +1,6 @@
+万能float 闭合(非常重要!) 关于 clear float 的原理可参见 [How To Clear Floats Without Structural Markup],
+将以下代码加入Global CSS 中,给需要闭合的div加上 class="clearfix" 即可,屡试不爽. 
+/* Clear Fix */ .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; } 
+.clearfix { display:inline-block; } /* Hide from IE Mac */ 
+.clearfix {display:block;} /* End hide from IE Mac */ /* end of clearfix */ 
+或者这样设置：.hackbox{ display:table; //将对象作为块元素级的表格显示}

@@ -1,0 +1,5 @@
+// 弹出窗口剧中显示
+				sheetWindow.x = FlexGlobals.topLevelApplication.stage.stageWidth / 2 
+					- sheetWindow.width / 2;
+				sheetWindow.y = FlexGlobals.topLevelApplication.stage.stageHeight / 2
+					- sheetWindow.height / 2;

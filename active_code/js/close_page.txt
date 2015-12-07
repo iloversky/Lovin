@@ -1,0 +1,4 @@
+// 关闭页面，不弹出提示框
+window.opener = null;
+var _self = window.open("", "_self");
+_self.close();

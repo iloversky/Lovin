@@ -1,0 +1,33 @@
+*************************************************************
+
+ @Name : layer v1.4.2 弹层组件说明
+ @author: 贤心
+ @date: 2012-12-2
+ @blog: http://xu.sentsin.com
+ @微博：http://t.qq.com/xian_xin
+ @QQ群：176047238(layer交流2群)
+ @Copyright: Sentsin Xu(贤心)
+ @官网说明：http://xu.sentsin.com/jquery/layer
+ @赞助layer: https://me.alipay.com/sentsin
+
+*************************************************************
+
+【注意事项】
+
+一、使用时，请将layer整个文件夹放置你站点的任何一个目录，只需引入layer.js或layer.min.js即可，css等其它文件无需引入。
+
+二、引入示例：
+	<script src="http://xu.sentsin.com/lily/init/jquery.js"></script>
+	<script src="http://xu.sentsin.com/lily/lib/layer/layer.min.js"></script>
+	layer.js 开发版，layer.min.js 压缩版。引入其中一个即可。
+
+三、如果您的js引入是通过合并处理或者您不想采用layer自动获取的绝对路径，您需要打开layer.js 或者 layer.min.js 去配置相对路径url。（默认采用自动获取layer.js所在的路径）
+
+四、jquery必须为1.8或1.8以上版本（原因，更小，性能更好，且新版layer使用了部分jq1.8的特性），下载包里的jquery即为1.8.2下载地址
+
+五、更多使用说明与演示（demo），请参见layer官网。
+
+六、layer永久免费，未经作者允许，请勿用于商业用途。版权最终解释权：贤心。
+
+
+ 

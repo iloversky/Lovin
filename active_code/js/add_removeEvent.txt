@@ -1,0 +1,18 @@
+// 添加和删除事件, 未验证
+function removeEvent(objStr) {
+	var obj = document.getElementById(objStr);
+	if (window.removeEventListener) {
+        obj.removeEventListener('blur', validate, false);
+    } else {
+        obj.detachEvent('onblur', validate);
+    }
+}
+
+function addEvent(objStr) {
+	var obj = document.getElementById(objStr);
+    if (window.removeEventListener) {
+       obj.addEventListener('blur', validate, false);
+    } else {
+       obj.attachEvent('onblur', validate);
+    }
+}

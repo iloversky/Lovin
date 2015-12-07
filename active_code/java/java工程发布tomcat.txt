@@ -1,0 +1,1 @@
+<Context path="/bbs" reloadable="true" docBase="E:\workspace\bbs\WebRoot" />

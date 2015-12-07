@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>日期选择器</title>
+<link href="../Css/Style.css" rel="stylesheet" type="text/css" />
+<script src="../scripts/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../scripts/jQselect.js"></script><!-- 下拉框样式美化 -->
+<script type="text/javascript">	
+	$(document).ready(function(){
+		                       
+		$("#select").selectbox();
+		
+		$("#select1").selectbox();
+	});
+</script>
+</head>
+
+<body>
+
+		
+        <table width="70%" align="center"><tr><td>Select下拉框</td> <td>
+        <select id="select" name="select" >
+				<option value="全部">全部</option>
+				<option value="0">工会门系统</option>
+				<option value="1">班组博客系统</option>
+				<option value="3">合同履行监控过程系统</option>
+				
+			</select>
+        </td></tr></table>
+       <div style="padding-top: 80px;"></div>
+	<div>  
+		<div>
+        <table width="70%" align="center"><tr><td>Select下拉框</td> <td>
+        <select id="select1" name="select" >
+				<option value="全部">全部</option>
+				<option value="0">门系统</option>
+				<option value="1">班组系统</option>
+				<option value="3">合同履</option>
+				
+			</select>
+        </td></tr></table>
+        </div>
+		</div>
+</body>
+</html>

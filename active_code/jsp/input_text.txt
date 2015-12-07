@@ -1,0 +1,5 @@
+############条件输入提示，没有输入条件时，输入框显示检索的字段###########
+<input type="text" id="queryCondition" name="queryCondition"
+							  onblur="if(this.value.Trim()==''){this.value='讲师姓名/编码';this.style.color='#ACA899';}" 
+							  onfocus="if(this.value.Trim()=='讲师姓名/编码'){this.value='';this.style.color='';}" 
+							  value="${queryCondition}" />

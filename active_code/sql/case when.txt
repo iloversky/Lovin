@@ -1,0 +1,6 @@
+select substr(a.APPLY_ORG_ID,1,8) orgId, 
+sum(case when (a.ACTION IS NOT NULL and a.ACTION!='') then 1 else 0 end) totalNum,
+sum(case when a.ACTION='Failed' then 1 else 0 end) failedNum, 
+sum(case when a.ACTION='Active' then 1 else 0 end) activeNum,
+sum(case when a.ACTION='Completed' then 1 else 0 end) completedNum from T_UWO_APPLY a 
+where a.APPLY_TIME between '2013-02-14 13:52:53' and '2014-05-24 17:37:34' group by substr(a.APPLY_ORG_ID,1,8)

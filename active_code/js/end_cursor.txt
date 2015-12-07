@@ -1,0 +1,6 @@
+// 设置光标在文本最末尾
+var obj = event.srcElement; 
+var txt = obj.createTextRange();  
+txt.moveStart("character", obj.value.length);   
+txt.collapse(true);   
+txt.select();  

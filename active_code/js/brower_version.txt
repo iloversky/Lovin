@@ -1,0 +1,21 @@
+function IEVersion(){
+	  var Sys = {};
+      var ua = navigator.userAgent.toLowerCase();
+      if (window.ActiveXObject)
+          Sys.ie = ua.match(/msie ([\d.]+)/)[1] ;
+      else if (ua.match(/firefox\/([\d.]+)/)[1])
+          Sys.firefox = ua.match(/firefox\/([\d.]+)/)[1] ;
+      else if (window.MessageEvent && !document.getBoxObjectFor)
+          Sys.chrome = ua.match(/chrome\/([\d.]+)/)[1] ;
+      else if (window.opera)
+          Sys.opera = ua.match(/opera.([\d.]+)/)[1] ;
+      else if (window.openDatabase)
+          Sys.safari = ua.match(/version\/([\d.]+)/)[1];
+
+      //以下进行测试
+      if(Sys.ie) return ('IE'+Sys.ie);
+      if(Sys.firefox) return ('Firefox'+Sys.firefox);
+      if(Sys.chrome) return ('Chrome'+Sys.chrome);
+      if(Sys.opera) return ('Opera'+Sys.opera);
+      if(Sys.safari) return ('Safar'+Sys.safari);
+}
